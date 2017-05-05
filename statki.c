@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int numbersCount;
+    int numbersCount, j, i, k;
     scanf("%d", &numbersCount);
     if (numbersCount < 1 || numbersCount > 100) {
         return 1;
     }
 
     char board[8][8];
-    for (int j = 0; j < 8; ++j) {
-        for (int i = 0; i < 8; ++i) {
+    for (j = 0; j < 8; ++j) {
+        for (i = 0; i < 8; ++i) {
             board[j][i] = '.';
         }
     }
 
-    for (int k = 0; k < numbersCount; ++k) {
+    for (k = 0; k < numbersCount; ++k) {
         int x, y;
         scanf("%d", &x);
         if (x < 1 || x > 8) {
@@ -27,8 +27,8 @@ int main() {
         board[x - 1][y - 1] = 'X';
     }
 
-    for (int j = 0; j < 8; ++j) {
-        for (int i = 0; i < 8; ++i) {
+    for (j = 0; j < 8; ++j) {
+        for (i = 0; i < 8; ++i) {
             printf("%c", board[j][i]);
         }
         printf("\n");
