@@ -17,11 +17,11 @@ int main() {
     // to poprawic poniewaz moze byc problem z wyswietlaniem liczby unsigned long long
 
     unsigned long long number;
-    scanf("%d", &number);
+    scanf("%llu", &number);
     if (number < 1 || number > pow(10, 17)) {
         return 1;
     }
-    printf("%d", convertToBinary(number));
+    printf("%llu", convertToBinary(number));
 
     return 0;
 }
