@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-unsigned long long convertToBinary(unsigned long long number) {
+unsigned long long convertToBinary(unsigned long long number) { // Słaby pomysł
     unsigned long long binaryNumber = 0, temp, i = 1;
     while (number != 0) {
         temp = number % 2;
