@@ -8,7 +8,7 @@ int countFactorial(int number) {
 }
 
 int main() {
-    int n = 10, k = 1;
+    int n, k;
     scanf("%d", &n);
     scanf("%d", &k);
     if (k < 0 || k > 10) {
