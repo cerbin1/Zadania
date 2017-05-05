@@ -14,11 +14,11 @@ int main() {
         }
     }
     for (i = 0; i < numbersCount; ++i) {
-        int sum = 0;
+        unsigned long long sum = 0;
         for (j = i; j < numbersCount; ++j) {
             sum += array[j];
         }
-        printf("%d ", sum);
+        printf("%lli ", sum);
     }
 
     return 0;
