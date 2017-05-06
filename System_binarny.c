@@ -1,27 +1,25 @@
 #include <stdio.h>
 #include <math.h>
-
-unsigned long long convertToBinary(unsigned long long number) { // Słaby pomysł
-    unsigned long long binaryNumber = 0, temp, i = 1;
-    while (number != 0) {
-        temp = number % 2;
-        number /= 2;
-        binaryNumber += temp * i;
-        i *= 10;
-    }
-    return binaryNumber;
-}
+#include <string.h>
 
 int main() {
-    // Jezeli kompilator tu nie przejdzie bo bedzie chcial wprowadzic za duza liczbe na wejsciu trzeba bedzie
-    // to poprawic poniewaz moze byc problem z wyswietlaniem liczby unsigned long long
+    long long decimal;
+    int index = 0;
 
-    unsigned long long number;
-    scanf("%llu", &number);
-    if (number < 1 || number > pow(10, 17)) {
+    scanf("%lli", &decimal);
+    if (decimal < 1 || decimal > 100000000000000000) {
         return 1;
     }
-    printf("%llu", convertToBinary(number));
+    char binary[(int) ceil(log2(decimal))];
+
+    while (decimal > 0) {
+        binary[index] = (char) ((decimal % 2) + '0');
+        decimal /= 2;
+        index++;
+    }
+    binary[index] = '\0';
+
+    printf("%s", strrev(binary));
 
     return 0;
 }
