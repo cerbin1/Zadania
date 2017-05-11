@@ -4,7 +4,7 @@ int main() {
     int numbersCount, j, i, k;
     scanf("%d", &numbersCount);
     if (numbersCount < 1 || numbersCount > 100) {
-        return 1;
+        return 0;
     }
 
     char board[8][8];
