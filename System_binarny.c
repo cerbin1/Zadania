@@ -22,7 +22,7 @@ int main() {
 
     scanf("%lli", &decimal);
     if (decimal < 1 || decimal > 100000000000000000) {
-        return 1;
+        return 0;
     }
     char binary[(int) ceil(log2(decimal))];
 
