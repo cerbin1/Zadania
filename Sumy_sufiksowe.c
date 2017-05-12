@@ -1,24 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int numbersCount, i, j;
-    scanf("%d", &numbersCount);
-    if (numbersCount < 1 || numbersCount > 50000) {
-        return 0;
-    }
-    int array[numbersCount];
-    for (i = 0; i < numbersCount; ++i) {
+    int numbers;
+    long sum = 0;
+    scanf("%d", &numbers);
+    int array[numbers];
+    int i;
+
+    for (i = 0; i < numbers; ++i) {
         scanf("%d", &array[i]);
-        if (array[i] < 1 || array[i] > 20000) {
-            return 0;
-        }
+        sum += array[i];
     }
-    for (i = 0; i < numbersCount; ++i) {
-        unsigned long long sum = 0;
-        for (j = i; j < numbersCount; ++j) {
-            sum += array[j];
-        }
-        printf("%lli ", sum);
+
+    for (i = 0; i < numbers; ++i) {
+        printf("%li ", sum);
+        sum -= array[i];
     }
 
     return 0;

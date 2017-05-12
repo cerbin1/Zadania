@@ -3,5 +3,5 @@ project(Zadania)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES System_binarny.c)
+set(SOURCE_FILES Sumy_sufiksowe.c)
 add_executable(Zadania ${SOURCE_FILES})
